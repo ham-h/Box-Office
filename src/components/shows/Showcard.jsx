@@ -10,7 +10,7 @@ const Showcard = ({name,image,id,summary}) => {
     <p>{summarystrip}</p>
     <div>
     <Link to={`/show/${id}`}>read more</Link>
-    {/* now whwnwvwr v click readmore v have different url ids */}
+    {/* now whwnwvwr v click readmore v have different url ids ,now to fetch dynamic data-v use useeffect*/}
     <button type='button'>star me</button>
     </div>
     </div>

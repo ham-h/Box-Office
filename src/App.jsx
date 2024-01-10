@@ -1,12 +1,19 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 import Home from './pages/Home';
 import Starred from './pages/Starred';
 import Mainlayout from './components/Mainlayout';
 import Show from './pages/Show';
+const queryClient = new QueryClient()
 function App() {
   return (
     <div>
+       <QueryClientProvider client={queryClient}>
+     
+  
       <BrowserRouter>
       <Routes>
         <Route element={<Mainlayout/>}>
@@ -36,6 +43,7 @@ function App() {
       <Route path="contact-us" element={<Contact />} /> */}
       </Routes>
       </BrowserRouter>
+      </QueryClientProvider>
     </div>
   );
 }
@@ -45,3 +53,4 @@ export default App;
 // npm run format
 // The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>. Child routes inherit all params from their parent routes.
 // from reactrourter
+// installed react query,quick start

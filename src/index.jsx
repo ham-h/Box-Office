@@ -8,8 +8,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    {/* string mode used to rerender compo 2 timmes for any errors aftr useeffect v wll remove it */}
+    <App/>
+   </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

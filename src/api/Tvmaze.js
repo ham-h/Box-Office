@@ -11,6 +11,8 @@ const apiGet =async (querystring) => {
 };
 export const searchforshows=(query)=>apiGet(`/search/shows?q=${query}`)
 export const searchforpeople=(query)=>apiGet(`/search/people?q=${query}`)
+// export const getshowbyid=(showid)=>apiGet(`/shows/:id`) from url shows
+export const getshowbyid=(showid)=>apiGet(`/shows/${showid}?embed[]=seasons&embed[]=cast`)//added embed later from embedde in maze
 
 
 

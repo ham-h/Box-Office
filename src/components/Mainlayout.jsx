@@ -6,7 +6,7 @@ import Apptitle from "./Apptitle"
 const Mainlayout = () => {
   return (
     <div><Apptitle />
-    {/* title="hlo" subtitle="ooo" v could ovewrite here*/}
+    {/* title="hlo" subtitle="ooo" v could ovewrite here */}
         <Nav/>
         <Outlet/>
     </div>

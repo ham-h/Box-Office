@@ -2,8 +2,33 @@
 import { searchforshows,searchforpeople } from '../api/Tvmaze';
 import { useState } from 'react';
 import SearchForm from '../components/SearchForm';
+// const reducerfn = ( currentcounter, action ) => {
+//   // console.log({ currentcounter, action });
+//   // eslint-disable-next-line default-case
+//   switch(action.type) {
+//     case 'INCREMENT':
+//       return currentcounter + 1;
+//     case 'DECREMENT':
+//       return currentcounter - 1;
+//     case 'RESET':
+//       return 0;
+//   }
+//   return 0;
+// };--IF THERE R SO MANY ACTIONS V CAN USE usereduce than usestate
 
 const Home = () => {
+  // const [counter, dispatch] = useReducer(reducerfn, 0);
+
+  // const increment = () => {
+  //   dispatch({ type: 'INCREMENT' });
+  // };
+  // const decrement = () => {
+  //   dispatch({ type: 'DECREMENT' });
+  // };
+  // const reset = () => {
+  //   dispatch({ type: 'RESET' });
+  // };
+
   // const [search, setsearch] = useState('');
   const [apiData, setapiData] = useState(null); //instead  of [] ,can use null by using rendering func down
   const [dataerror, setdataerror] = useState(null);
@@ -82,7 +107,19 @@ const Home = () => {
             checked={searchopt === 'actors'}
             onChange={onradiochange}
           />
+
           {/* value={actors} */}
+
+            {/* <div>{counter}</div>
+      <button type="button" onClick={increment}>
+        increment
+      </button>
+      <button type="button" onClick={decrement}>
+        decrement
+      </button>
+      <button type="button" onClick={reset}>
+        reset
+      </button> */}
      
     
       <div>

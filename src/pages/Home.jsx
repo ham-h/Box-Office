@@ -8,7 +8,8 @@ import { useQuery } from '@tanstack/react-query';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
-
+  //state of starshows will be an array of showids,
+  
   const { data: apiData, error: dataerror } = useQuery({
     queryKey: ['searche', filter], //filter helps to rerun react query when value changes n filter func fetch once again
     queryFn: () =>
@@ -16,9 +17,9 @@ const Home = () => {
         ? searchforshows(filter.q)
         : searchforpeople(filter.q),
 
-    enabled: !!filter, 
+    enabled: !!filter,
     //enables used when v want to fetch data conditionally ,this will disable when filter is falsy
-    refetchOnWindowFocus:false,
+    refetchOnWindowFocus: false,
   });
   // const [search, setsearch] = useState('');
   // const [apiData, setapiData] = useState(null); //instead  of [] ,can use null by using rendering func down
@@ -75,6 +76,7 @@ const Home = () => {
   return (
     <div>
       <SearchForm onsearch={onsearch} />
+    
 
       <div>{renderingApidata()}</div>
     </div>

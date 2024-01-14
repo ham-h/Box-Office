@@ -15,4 +15,8 @@ export const searchforpeople=(query)=>apiGet(`/search/people?q=${query}`)
 export const getshowbyid=(showid)=>apiGet(`/shows/${showid}?embed[]=seasons&embed[]=cast`)//added embed later from embedde in maze
 
 
+export const getshowsbyid=async(showids)=>{
+   const promises = showids.map(showid => apiGet(`/shows/${showid}`))
+ return  Promise.all(promises)//returns array array of resolves of array of promises in parallel
 
+}
